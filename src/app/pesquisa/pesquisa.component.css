@@ -1,0 +1,95 @@
+.card:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(10px);
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    animation: glowing 10s linear infinite;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity .3s ease;
+    border-radius: 10px;
+}
+
+.card:hover:before {
+    opacity: 1;
+}
+
+.card:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.custom-button {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+.custom-button:hover {
+color: black;
+animation: neon 1s ease-in-out infinite alternate;
+
+}
+
+.custom-button:after{
+animation: neon 3s ease infinite;
+}
+
+.custom-button:active{
+background-color: black;
+color: white;
+border: white;
+}
+@keyframes neon {
+from {
+    box-shadow: 0 0 5px black,
+                0 0 5px black,
+                0 0 5px black;
+}
+}
+
+.card-text{
+     
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.card-title{
+     
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.canto{
+    background: black;
+    border: white;
+    width: 50px;
+    position: fixed;
+    bottom: 20px; /* Distância do fundo da janela */
+    right: 20px; /* Distância da direita da janela */
+    animation: neon 2s ease-in-out infinite;
+}
+@media (max-width: 1000px) and (min-width:0){
+    .canto{
+        display: none;
+    }   
+}

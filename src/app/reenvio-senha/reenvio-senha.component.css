@@ -1,0 +1,59 @@
+.container{
+        width: 500px; /* Defina a largura desejada para o container */
+        height: 400px; /* Defina a altura desejada para o container */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: solid 2px white; /* Cor de fundo do container */
+}
+
+.quadrado {
+    width: 200px;
+    height: 40px;
+    border: 2px solid ; /* Bordas transparentes */
+    position: relative;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    animation:  moveRight 2s ease infinite alternate; /* Aplicar a animação */
+}
+
+.quadrado:hover {
+    color: white;
+    animation: neon 1s ease-in-out infinite alternate;
+    
+}
+
+.quadrado:after{
+    animation: neon 3s ease infinite;
+}
+
+.quadrado:active{
+    background-color: white;
+    color: black;
+    border: white;
+}
+
+#Enviar{
+    width: 100%;
+}
+@keyframes neon {
+    from {
+        box-shadow: 0 0 5px white,
+                     0 0 5px white,
+                     0 0 5px white;
+    }
+}
+
+@media (max-width:550) and (min-width:0){
+    .container{
+        width: 400px; /* Defina a largura desejada para o container */
+        height: 300px; /* Defina a altura desejada para o container */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: solid 2px white; /* Cor de fundo do container */
+}
+}

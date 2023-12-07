@@ -1,0 +1,283 @@
+.quadrado2{
+    width: 600px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: solid 2px white;
+}
+.quadrado{
+    width: 200px;
+    height: 40px;
+    border: 2px solid ; /* Bordas transparentes */
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    animation:  moveRight 2s ease infinite alternate;
+    position: absolute;
+    bottom: 20px; /* Posiciona o botão 10px acima da parte inferior */
+    right: 20px; /* Posiciona o botão 10px à direita */
+}
+
+.square {
+    width: 900px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    border: 1px solid #ccc; /* Adicione uma borda para destacar o quadrado */
+}
+
+.square img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o quadrado */
+    max-height: 100%; /* Garante que a imagem não ultrapasse o quadrado */
+    
+}
+
+.square:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(10px);
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    animation: glowing 10s linear infinite;
+    opacity: 1;
+    cursor: pointer;
+    transition: opacity .3s ease;
+    border-radius: 10px;
+}
+
+.square:hover:before {
+    opacity: 1;
+}
+
+.square:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.text {
+    flex: 3; /* Ocupa todo o espaço restante à direita */
+    padding: 20px; /* Adicione algum espaço entre a imagem e o texto */
+}
+.quadrado:hover {
+    color: white;
+    animation: neon 1s ease-in-out infinite alternate;
+    
+}
+
+.quadrado:after{
+    animation: neon 3s ease infinite;
+}
+
+.quadrado:active{
+    background-color: white;
+    color: black;
+    border: white;
+}
+.content{
+    height: 250px;
+}
+#preco{
+    size: 18px;
+    text-align: end;
+    animation: neon2 2s alternate infinite;
+}
+/**/
+.quadrado3 {
+    width: 30px;
+    height: 30px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: 13px;
+    border: 2px solid ; /* Bordas transparentes */
+    background-color: black;
+    color: white;
+    
+}
+
+.quadrado3:active{
+    background-color: white;
+    color: black;
+    border: white;
+}
+.quadrado3:hover {
+    color: white;
+    animation: neon2 1s ease-in-out infinite alternate;
+}
+/**/
+.quadrado4 {
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 13px;
+    border: 2px solid ; /* Bordas transparentes */
+    background-color: black;
+    color: white;
+}
+.quadrado4:active{
+    background-color: white;
+    color: black;
+    border: white;
+}
+.quadrado4:hover {
+    color: white;
+    animation: neon2 1s ease-in-out infinite alternate;
+}
+input{
+    width: 30px;
+    height: 30px;
+    border: 2px solid white; 
+}
+@keyframes neon {
+    from {
+        box-shadow: 0 0 5px white,
+                     0 0 5px white,
+                     0 0 5px white;
+    }
+}
+@keyframes neon2 {
+    from {
+        text-shadow: 0 0 5px white,
+                     0 0 5px white,
+                     0 0 5px white;
+    }
+}
+input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+@media (max-width: 450px) and (min-width: 0px){
+    
+    .square {
+            margin-top: 550px;
+            width: 100%;
+            height: 80%; /* Reduzi a altura do quadrado para acomodar a imagem e o texto */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* Adicione uma borda para destacar o quadrado */
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden; /* Para esconder o gradiente de fundo */
+        }
+        
+        .square img {
+             max-width: 100%; /* Garante que a imagem não ultrapasse o quadrado */
+            max-height: 100%; /* Garante que a imagem não ultrapasse o quadrado */
+            object-fit: cover; /* Mantém a proporção da imagem e preenche o espaço disponível */
+        }
+        .square:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -3px;
+            left:-3px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(10px);
+            width: calc(100% + 20px);
+            height: calc(100% + 20px);
+            animation: glowing 10s linear infinite;
+            opacity: 1;
+            cursor: pointer;
+            transition: opacity .3s ease;
+            border-radius: 10px;
+        }
+
+        .square:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: black;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+}
+
+@media (max-width: 750px) and (min-width: 450px){
+    .square {
+        margin-top: 550px;
+        width: 100%;
+        height: 80%; /* Reduzi a altura do quadrado para acomodar a imagem e o texto */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ccc; /* Adicione uma borda para destacar o quadrado */
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden; /* Para esconder o gradiente de fundo */
+    }
+    
+    .square img {
+         max-width: 100%; /* Garante que a imagem não ultrapasse o quadrado */
+        max-height: 100%; /* Garante que a imagem não ultrapasse o quadrado */
+        object-fit: cover; /* Mantém a proporção da imagem e preenche o espaço disponível */
+    }
+}
+
+@media (max-width: 980px) and (min-width: 700px){
+    .square {
+        margin-top: 700px;
+        width: 100%;
+        height: 80%; /* Reduzi a altura do quadrado para acomodar a imagem e o texto */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ccc; /* Adicione uma borda para destacar o quadrado */
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden; /* Para esconder o gradiente de fundo */
+    }
+    
+    .square img {
+        max-width: 100%; /* Garante que a imagem não ultrapasse o quadrado */
+        max-height: 100%; /* Garante que a imagem não ultrapasse o quadrado */
+        object-fit: cover; /* Mantém a proporção da imagem e preenche o espaço disponível */
+    }
+}
+
+.canto{
+    background: black;
+    border: white;
+    width: 50px;
+    position: fixed;
+    bottom: 20px; /* Distância do fundo da janela */
+    right: 20px; /* Distância da direita da janela */
+    animation: neon 2s ease-in-out infinite;
+}
+@media (max-width: 1000px) and (min-width:0){
+    .canto{
+        display: none;
+    }   
+}

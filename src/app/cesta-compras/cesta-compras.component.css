@@ -1,0 +1,33 @@
+.table thead {
+    background: black;
+}
+
+.quadrado:hover {
+    color: white;
+    animation: neon 1s ease-in-out infinite alternate;
+    
+}
+
+.quadrado:after{
+    animation: neon 3s ease infinite;
+}
+
+.quadrado:active{
+    background-color: white;
+    color: black;
+    border: white;
+}
+@keyframes neon {
+    from {
+        box-shadow: 0 0 5px white,
+                     0 0 5px white,
+                     0 0 5px white;
+    }
+}
+
+@media (max-width: 550px) and (min-width: 0px){
+    .quadrado{
+        width: 150px;
+    }
+}
+

@@ -1,0 +1,37 @@
+.quadrado:hover {
+    color: white;
+    animation: neon 1s ease-in-out infinite alternate;
+    
+}
+
+.quadrado10{
+    height: 350px;
+    background: black;
+}
+
+.quadrado:after{
+    animation: neon 3s ease infinite;
+}
+
+.quadrado:active{
+    background-color: white;
+    color: black;
+    border: white;
+}
+.centralizar {
+    text-align: center;
+}
+
+#rgs{
+    margin-top: 50px;
+}
+
+
+@keyframes neon {
+    from {
+        box-shadow: 0 0 5px white,
+                     0 0 5px white,
+                     0 0 5px white;
+    }
+}
+

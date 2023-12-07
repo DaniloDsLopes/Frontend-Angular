@@ -1,0 +1,46 @@
+<div class="square">
+    <img src="https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/c/m/cm-h71fw-r15.jpg" alt="Imagem do quadrado">
+    <div class="text">
+        <div class="border-bottom">
+            <h2>GABINETE GAMER</h2>
+        </div>
+        <div class="content pd-3">
+            <div class="mt-3 ml-3">
+                GABINETE GAMER NZXT H7 FLOW RGB, MID-TOWER, LATERAL DE VIDRO, COM 4 FANS, BRANCO, CM-H71FW-R1
+            </div>
+        </div>
+
+        <div id="preco"class="container">
+            <h2>R$300,00</h2>
+        </div>
+        <div class="container1">
+            <Button class="quadrado3" onclick="decrement()">-</Button>
+            <input type="number" class="Valor" min="0" value="0">
+            <Button class="quadrado4" onclick="increment()">+</Button>
+        </div>
+    </div>
+    <a href="carrinho-compras">
+        <button type="button" class="quadrado">Comprar</button>
+    </a>
+</div>
+<div class="image"> 
+    <a href="carrinho-compras">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB9klEQVR4nO2Xv8tBYRTHD7KQAX+CUQYxSUaF0WhU/AF+ZWCgJJnYDcpgY7AxKNksLJYbE/+ClL5vz633ljd5e++v53p7Tn2ne+7t+zmd89zzEBHhw0W8DUAAEP8qQrQQ8a8kxBDTZ4p4G4AAIP5VhGgh+q9DHAgEcDgcIEnSk2azGRwOh/UBotEo7vc7XkUwGLQ+ABHB7XbD6/Uqms/nMsBwOEShUNBNoVDIGICfarfbMCL2+705ALlczhCA5XJpDkA4HDYEYDAYmAPgcrnweDx0BygWi+YAMJ1OJ90B4vG4eQCLxUJ3AJ/PZx5Av9/X1fz1elXlQzVAPp+3wgkE1QCxWExXgHq9bi4A+yPrFbvdDh6Px1wApsvlIhvo9Xqo1Wp/VrVaRTabhdPpVO1BE8BqtZIBMpmMFgPQKPUvs75lcT6f5VOp2+3+Wel0mh8A21K3262m/j8ej/wAmNilJpVKoVQqqZqBSCTCF8ACIs0fYa1UqVTQaDR+XQf8fj+azSbK5bK8FFoCYDqdKj29Xq/f5m42GyV3MplYA4CdQt9xu91gs9le5tnt9qf7tSRJ1gDodDqKqdFo9DZ3PB4rua1WyxoATIlEAslkUq7yuzz2nOWp3P1hGABHEW8DEADEv4oQLUT8KwkxxPSZIt4GIACIfxVV6wv44HcvywZ4GgAAAABJRU5ErkJggg==" class="rounded-pill border canto fixed " alt="">
+    </a>
+  </div> 
+
+<script>
+    function decrement() {
+        const input = document.querySelector('.Valor');
+        let value = parseInt(input.value);
+        if (value > 0) {
+            input.value = (value - 1).toString();
+        }
+    }
+
+    function increment() {
+        const input = document.querySelector('.Valor');
+        let value = parseInt(input.value);
+        input.value = (value + 1).toString();
+    }
+</script>
